@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Perpustakaan Sekolah</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 8c4-2 8-2 12 1v19c-4-3-8-3-12-1zM30 8c-4-2-8-2-12 1v19c4-3 8-3 12-1z"/></svg>
+    <div><span id="nm">Perpustakaan</span><small id="petugas">Sistem layanan perpustakaan</small></div>
+  </div>
+  <nav id="tabs">
+    <button data-m="kunjungan" class="on">Kunjungan</button>
+    <button data-m="pinjam">Pinjam</button>
+    <button data-m="kembali">Kembali</button>
+    <button data-m="kartu">Kartu</button>
+  </nav>
+  <div id="stat"></div>
+</header>
+
+<main class="grid" id="main">
+  <div class="col">
+    <section class="box">
+      <div id="reader"></div>
+      <div class="bar"><button class="btn" id="camBtn">Nyalakan kamera</button><button class="btn ghost" id="flip" title="Ganti kamera depan/belakang">Putar</button></div>
+      <div class="find">
+        <div class="f"><select id="kelas"><option value="">Semua kelas</option></select><input id="q" placeholder="Scan atau ketik NIS, nama" autocomplete="off"></div>
+        <div id="hits"></div>
+      </div>
+    </section>
+  </div>
+  <div class="col">
+    <section class="box" id="panel"></section>
+    <section class="box" id="logBox"><h4 style="margin-top:0">Pengunjung hari ini</h4><div id="log"></div></section>
+  </div>
+</main>
+
+<section id="cardsView" hidden>
+  <div class="tools"><select id="kelas2"></select><button class="btn" onclick="print()">Cetak kartu</button></div>
+  <div class="sheet" id="sheet"></div>
+</section>
+<div id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="common.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

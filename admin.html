@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin Perpustakaan</title>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+<div id="login">
+  <form id="lf">
+    <h1>Admin Perpustakaan</h1>
+    <p>Masukkan PIN admin untuk mengelola data.</p>
+    <label>PIN admin<input id="pin" type="password" autocomplete="current-password" required></label>
+    <button class="btn" style="width:100%">Masuk</button>
+  </form>
+</div>
+<div class="app" id="app" hidden>
+  <aside id="nav">
+    <div class="brand">Admin<small>Perpustakaan sekolah</small></div>
+    <button data-v="dash">Ringkasan</button>
+    <button data-v="siswa">Siswa</button>
+    <button data-v="buku">Buku</button>
+    <button data-v="pinjam">Pinjaman</button>
+    <button data-v="atur">Pengaturan</button>
+    <a href="index.html">Layar petugas</a>
+  </aside>
+  <main id="view"></main>
+</div>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
