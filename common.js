@@ -1,5 +1,5 @@
 // Pengaturan & fungsi bersama (dipakai index.html dan admin.html)
-const API = 'GANTI_DENGAN_URL_APPS_SCRIPT'; // URL Web App dari Apps Script, cukup diisi di sini
+const API = 'https://script.google.com/macros/s/AKfycbwabEQvvKwFVuVKi16Nv-HJbBCusgctyj0J-A5YInsGKJZCYpziS9aKHoDJu0qanQDW/exec'; // URL Web App dari Apps Script, cukup diisi di sini
 const $ = s => document.querySelector(s);
 const e = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const ph = (id, w = 160) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
